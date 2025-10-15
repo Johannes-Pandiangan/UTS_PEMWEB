@@ -246,6 +246,18 @@ html {
   scroll-behavior: smooth;
 }
 
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.video-container iframe {
+  border-radius: 15px;
+  max-width: 100%;
+  height: auto;
+}
+
 /* Responsif untuk layar kecil (HP) */
 @media (max-width: 768px) {
   .navbar ul{
@@ -285,3 +297,4 @@ html {
     white-space: nowrap;
   }
 }
+
