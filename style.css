@@ -1,0 +1,287 @@
+body {
+  margin: 0;
+  background: #427D9D;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #164863;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  color:aqua;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: courier New;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px; 
+}
+
+.card {
+  background: rgba(31, 41, 55, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  padding: 25px;
+  width: 200px;
+  height: 90%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: aqua;
+}
+
+.card p b {
+  color: black;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card2 {
+  background: rgba(31, 41, 55, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  padding: 25px;
+  width: 90%;
+  height: 90%px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card2:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+.card2-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.card2 h2 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.card2 p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: aqua;
+}
+
+.card ul li{
+  font-size: 16px;
+  line-height: 1.6;
+  color: aqua;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: right;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+  font-family: courier New;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.3s;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.navbar ul li a:hover {
+  background: cyan;
+  color: black;
+
+}
+
+.navbar ul li a.active {
+  background: cyan;
+  color: black;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+.content {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 50px;
+  padding: 20px;
+  background: #9BBEC8;
+  border-radius: 10px;
+}
+
+
+h1 {
+  color: #164863;
+  margin-bottom: 15px;
+}
+
+.foto-profil {
+  width: 180px;
+  height: 250px;
+  display: block;
+  margin: 15px auto;
+  object-fit: fill;
+  border: 5px solid #427D9D;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid #427D9D;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background:  rgba(31, 41, 55, 0.6);
+  color: aqua;
+}
+
+footer {
+  background: #0c3348;
+  text-align: center;
+  padding: 15px;
+  margin-top: 15px;
+  color: white;
+}
+
+footer p {
+  margin: 0 0 10px;
+  font-weight: bold;
+}
+
+footer .social {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin: 15px;
+  font-size: 30px;
+  padding: 8px 15px;
+  border: 2px solid white;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+footer .social:hover {
+  background: cyan;
+  color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsif untuk layar kecil (HP) */
+@media (max-width: 768px) {
+  .navbar ul{
+    flex-direction: column;
+    background: #427D9D;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    display: none;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+
+  .card {
+        width: 90%;
+      }
+
+  .card2 {
+        width: 90%;
+      }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
